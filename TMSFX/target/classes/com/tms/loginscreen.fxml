@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="@../../styles/site.css" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tms.controller.LoginController">
+    <top>
+        <AnchorPane prefHeight="56.0" prefWidth="350" styleClass="topbar" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="lblTitle" layoutX="14.0" layoutY="15.0" styleClass="title-label" text="{appProductName}"
+                       AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="111.0"
+                       AnchorPane.topAnchor="15.0"/>
+            </children>
+        </AnchorPane>
+    </top>
+
+    <center>
+        <AnchorPane fx:id="anchorPaneLogin" BorderPane.alignment="CENTER">
+            <children>
+                <VBox>
+                    <GridPane hgap="10" vgap="10">
+
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="100.0"/>
+                            <ColumnConstraints prefWidth="200.0"/>
+                        </columnConstraints>
+
+                        <padding>
+                            <Insets bottom="20.0" left="20.0" right="10.0" top="30.0"/>
+                        </padding>
+
+                        <Label text="Username: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                        <TextField fx:id="txtUsername" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                        <Label text="Password: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <PasswordField fx:id="txtPassword" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <rowConstraints>
+                            <RowConstraints/>
+                            <RowConstraints/>
+                        </rowConstraints>
+
+                    </GridPane>
+
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <AnchorPane prefHeight="43.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane hgap="10" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="100.0"/>
+                        <ColumnConstraints prefWidth="200.0"/>
+                    </columnConstraints>
+
+                    <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="20.0"/>
+                    </padding>
+
+                    <Label fx:id="lblVersion" text="Version 1.0" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+                    <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" spacing="10.0"
+                          GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <children>
+                            <Button onAction="#login" fx:id="cmdOk" defaultButton="true" mnemonicParsing="false" text="OK">
+                                <graphic>
+                                    <FontAwesomeIconView glyphName="BOLT" size="16" strokeType="OUTSIDE"
+                                                         strokeWidth="0.0"/>
+                                </graphic>
+                            </Button>
+                            <Button fx:id="cmdClose" mnemonicParsing="false" onAction="#onQuit" text="Cancel">
+                                <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="16" strokeType="OUTSIDE"
+                                                         strokeWidth="0.0"/>
+                                </graphic>
+                            </Button>
+                        </children>
+                    </HBox>
+                    <rowConstraints>
+                        <RowConstraints/>
+                    </rowConstraints>
+
+                </GridPane>
+
+            </children>
+        </AnchorPane>
+    </bottom>
+
+</BorderPane>

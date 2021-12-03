@@ -1,0 +1,23 @@
+.parent{
+    -fx-background-color:#F7F7F7;
+    -fx-background-radius: 0px;
+}
+
+.topbar{
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 7, 0, 0, 0);
+}
+
+.sidebar{
+    -fx-background-color: #EDEFF0;
+    -fx-background-radius: 0px;
+}
+
+.title-label{
+    -fx-font-size: 17px;
+}
+
+.treeSystemNavigation{
+    -fx-border-style: none;
+    -fx-background-color:transparent;
+}
