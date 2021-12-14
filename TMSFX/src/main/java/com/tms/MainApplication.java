@@ -16,7 +16,7 @@ import java.io.IOException;
 public class MainApplication extends Application {
 
     public static final String appProductName = "Training Management System";
-    public static final String appVersion = "1.0.0";
+    public static final String appVersion = "1.0.1002321000";
 
     @Override
     public void start(Stage stage) throws IOException {
